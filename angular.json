@@ -24,9 +24,13 @@
               "src/assets"
             ],
             "styles": [
-              "src/styles.css"
+              "src/styles.scss",
+              "./node_modules/bootstrap/dist/css/bootstrap.min.css"
             ],
-            "scripts": []
+            "scripts": [],
+            "stylePreprocessorOptions": {
+              "includePaths": [ "src/styles" ]
+            }
           },
           "configurations": {
             "production": {
@@ -88,7 +92,7 @@
               "src/assets"
             ],
             "styles": [
-              "src/styles.css"
+              "src/styles.scss"
             ],
             "scripts": []
           }
@@ -119,6 +123,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "first-cli"
+    }
+  },
+  "defaultProject": "first-cli",
+  "cli": {
+    "analytics": "bdc631c3-4c31-4cf3-80ad-80525ba4f900"
+  }
 }
