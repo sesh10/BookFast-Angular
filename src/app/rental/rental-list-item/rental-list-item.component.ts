@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 
 @Component({
   selector: 'app-rental-list-item',
@@ -6,6 +6,8 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./rental-list-item.component.css']
 })
 export class RentalListItemComponent implements OnInit {
+
+  @Input() currental: any;
 
   constructor() { }
 
