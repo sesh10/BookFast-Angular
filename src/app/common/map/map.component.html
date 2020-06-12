@@ -1,0 +1,8 @@
+<!-- <p>map works!</p> -->
+
+
+<agm-map (mapReady)="mapReadyHandler()" [latitude]="lat" [longitude]="lng" [zoom]="13">
+    <agm-circle *ngIf="!isPositionError && lat && lng" [latitude]="lat" [longitude]="lng" [radius]="800" [fillColor]="'#F44336'" [fillOpacity]="0.4"></agm-circle>
+    <agm-info-window *ngIf="isPositionError" [latitude]="0" [longitude]="0" [maxWidth]="300" [isOpen]=true>Place does not exist. We are trying to resolve this as soon as possible.</agm-info-window>
+</agm-map>
+
