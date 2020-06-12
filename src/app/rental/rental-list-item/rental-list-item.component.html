@@ -1,9 +1,9 @@
 <!-- <p>rental-list-item works!</p> -->
-<a routerLink="/rentals/{{currental.id}}">
+<a routerLink="/rentals/{{currental._id}}">
 <div class="card bwm-card">
-    <img class="card-img-top" src="http://via.placeholder.com/350x250" alt="">
+    <img class="card-img-top" src="{{currental.image}}" alt="">
     <div class="card-block">
-      <h6 class="card-subtitle">Whole {{currental.category}} &#183; {{currental.city}}</h6>
+      <h6 class="card-subtitle {{currental.category}}">{{currental.shared ? "Shared" : "Single"}} {{currental.category}} &#183; {{currental.city}}</h6>
       <h4 class="card-title">{{currental.title}}</h4>
       <p class="card-text">${{currental.rate}} per Night &#183; Free Cancelation</p>
     </div>
