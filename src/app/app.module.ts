@@ -8,6 +8,9 @@ import { AppComponent } from './app.component';
 import { HeaderComponent } from './common/header/header.component';
 import { RentalComponent } from './rental/rental.component';
 
+import { AuthModule } from '../app/auth/auth.module';
+
+
 const routes: Routes = [
   {path: '', redirectTo: "/rentals", pathMatch: "full"}
 ]
@@ -21,10 +24,13 @@ const routes: Routes = [
     BrowserModule,
     AppRoutingModule,
     RouterModule.forRoot(routes),
-    RentalModule
+    RentalModule,
+    AuthModule
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [
+    AppComponent
+  ]
 })
 
 export class AppModule { }

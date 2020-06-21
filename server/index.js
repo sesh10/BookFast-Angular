@@ -8,7 +8,7 @@ const userRoutes = require('./routes/users');
 
 mongoose.connect(config.DB_URI, {useNewUrlParser: true, useUnifiedTopology: true, useCreateIndex: true}).then(() => {
     const fakeDb = new FakeDb();
-    fakeDb.seedDb();
+    // fakeDb.seedDb();
 });
 
 const app = express();
