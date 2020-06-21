@@ -3,8 +3,10 @@ const mongoose = require('mongoose');
 const bodyParser = require('body-parser');
 const config = require('./config/dev');
 const FakeDb = require('./fake-db');
+
 const rentalRoutes = require('./routes/rentals');
 const userRoutes = require('./routes/users');
+const bookRoutes = require('./routes/bookings');
 
 mongoose.connect(config.DB_URI, {useNewUrlParser: true, useUnifiedTopology: true, useCreateIndex: true}).then(() => {
     const fakeDb = new FakeDb();
@@ -17,6 +19,7 @@ app.use(bodyParser.json());
 
 app.use('/api/v1/rentals', rentalRoutes);
 app.use('/api/v1/users', userRoutes);
+app.use('/api/v1/bookings', bookRoutes);
 
 const PORT = process.env.PORT || 3001;
 

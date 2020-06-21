@@ -25,7 +25,8 @@ const userSchema = new Schema({
     },
     rentals: [{
         type: Schema.Types.ObjectId, ref: 'Rental'
-    }]
+    }],
+    bookings: [{ type: Schema.Types.ObjectId, ref: 'Booking' }]
 });
 
 userSchema.methods.hasSamePassword = function (requestedPassword) {
