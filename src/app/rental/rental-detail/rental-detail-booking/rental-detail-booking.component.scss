@@ -37,3 +37,40 @@
     font-weight: 300;
   }
 }
+
+.title {
+  font-weight: 700;
+  font-size: 24px;
+}
+
+.buttons {
+  margin: 15px 0px;
+}
+
+em {
+  font-style: normal;
+  font-size: 15px;
+  font-weight: 700;
+}
+
+p {
+  margin: 0;
+}
+
+.modal-error {
+  margin: 16px;
+}
+
+.btn-bwm {
+  background-color: $main-color;
+  border-color: $main-color;
+  color: white;
+  padding: 9px 20px;
+  text-decoration: none;
+  font-size: 15px !important;
+
+  &:hover, &:focus, &:active {
+      border-color: $main-color !important;
+      background-color: $main-color !important;
+  } 
+}

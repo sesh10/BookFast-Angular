@@ -2,13 +2,15 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { RentalModule } from './rental/rental.module';
-
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { AuthModule } from '../app/auth/auth.module';
 import { AppRoutingModule } from './app-routing.module';
+import { ToastrModule } from 'ng6-toastr-notifications';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations'; 
+
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './common/header/header.component';
 import { RentalComponent } from './rental/rental.component';
-
-import { AuthModule } from '../app/auth/auth.module';
 
 
 const routes: Routes = [
@@ -25,7 +27,10 @@ const routes: Routes = [
     AppRoutingModule,
     RouterModule.forRoot(routes),
     RentalModule,
-    AuthModule
+    AuthModule,
+    NgbModule,
+    ToastrModule.forRoot(),
+    BrowserAnimationsModule
   ],
   providers: [],
   bootstrap: [
