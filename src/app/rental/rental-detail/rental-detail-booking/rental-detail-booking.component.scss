@@ -74,3 +74,16 @@ p {
       background-color: $main-color !important;
   } 
 }
+
+.booking {
+  padding: 20px;
+  border: 1px solid $light-gray-color;
+  .should-login {
+    text-align: center;
+    margin-bottom: 10px;
+    .btn-bwm {
+      font-size: 14px;
+      padding: 15px;
+    }
+  }
+}

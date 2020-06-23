@@ -7,6 +7,7 @@ import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
 import { BookingService } from '../../../booking/shared/booking.service';
 import { ToastrManager } from 'ng6-toastr-notifications';
 import { DaterangepickerComponent } from 'ng2-daterangepicker';
+import { AuthService } from '../../../auth/shared/auth.service';
 
 @Component({
   selector: 'app-rental-detail-booking',
@@ -36,7 +37,7 @@ export class RentalDetailBookingComponent implements OnInit {
   };
 
   constructor(private helper: HelperService, private modalService: NgbModal, private bookingService: BookingService,
-              private toastr: ToastrManager) {
+              private toastr: ToastrManager, public auth: AuthService) {
 
               }
 

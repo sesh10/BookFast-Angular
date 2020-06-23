@@ -1,9 +1,11 @@
 <nav class="navbar navbar-expand-lg navbar-light bg-light">
     <a class="navbar-brand" routerLink="/rentals">BookFast</a>
+
     <form class="form-inline">
-        <input class="form-control mr-sm-2 first-search" type="search" placeholder="Search" aria-label="Search">
-        <button class="btn btn-outline-success my-2 my-sm-0 btn-first-search" type="submit">Search</button>
+        <input #citySearch class="form-control mr-sm-2 first-search" type="search" placeholder="Search" aria-label="Search">
+        <button (click)="search(citySearch.value)" class="btn btn-outline-success my-2 my-sm-0 btn-first-search" type="button">Search</button>
     </form>
+
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
@@ -21,6 +23,18 @@
           <li class="nav-item active">
             <a class="nav-link">{{auth.getUsername()}}</a>
           </li>
+
+          <div class="nav-item dropdown clickable">
+            <a class="nav-link dropdown-toggle" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              Owner Section
+            </a>
+            <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+              <a class="dropdown-item" routerLink="/rentals/new">Create Rental</a>
+            </div>
+          </div>
+                    
+          <!-- https://api.adorable.io/avatars/285/abott@adorable.png -->
+          
           <li class="nav-item active clickable">
             <a class="nav-link" (click)="logout()">Logout</a>
           </li>
