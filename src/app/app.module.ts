@@ -7,11 +7,11 @@ import { AuthModule } from '../app/auth/auth.module';
 import { AppRoutingModule } from './app-routing.module';
 import { ToastrModule } from 'ng6-toastr-notifications';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations'; 
+import { ManageModule } from './manage/manage.module';
 
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './common/header/header.component';
 import { RentalComponent } from './rental/rental.component';
-
 
 const routes: Routes = [
   {path: '', redirectTo: "/rentals", pathMatch: "full"}
@@ -30,7 +30,8 @@ const routes: Routes = [
     AuthModule,
     NgbModule,
     ToastrModule.forRoot(),
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
+    ManageModule
   ],
   providers: [],
   bootstrap: [

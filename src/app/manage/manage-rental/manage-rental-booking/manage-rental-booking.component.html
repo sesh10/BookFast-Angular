@@ -1,0 +1,24 @@
+<!-- <p>manage-rental-booking works!</p> -->
+
+<button (click)="modalService.open(bookingModal)" class="btn btn-bwm">Show Bookings</button>
+
+<ng-template #bookingModal let-c="close" let-d="dismiss">
+    <div class="modal-header">
+      <h4 class="modal-title title">Bookings Made</h4>
+      <button type="button" class="close" aria-label="Close" (click)="d('Cross click')">
+        <span aria-hidden="true">&times;</span>
+      </button>
+    </div>
+    <div class="modal-body">
+      <div *ngFor="let booking of bookings" class="bookings-inner-container"> <!-- Iterate bookings here -->
+        <p><span>Date:</span> {{booking.startAt | formatDate}} - {{booking.endAt | formatDate}} </p> <!-- startAt - endAt -->
+        <p><span>Guests:</span> {{booking.guests}}</p> <!-- guests -->
+        <p><span>Total Price:</span> {{booking.totalPrice}} $</p> <!-- totalPrice -->
+        <hr > <!-- optional: do not display after last element -->
+      </div>
+    </div>
+    <div class="modal-footer">
+      <button type="button" class="btn btn-bwm" (click)="c('Close click')">Cancel</button>
+    </div>
+</ng-template>
+  
