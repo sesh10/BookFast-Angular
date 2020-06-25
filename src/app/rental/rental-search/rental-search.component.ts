@@ -37,7 +37,7 @@ export class RentalSearchComponent implements OnInit {
       },
       (errorResponse: HttpErrorResponse) => {
         this.errors = errorResponse.error.errors;
-    })
+    });
   }
 
 }

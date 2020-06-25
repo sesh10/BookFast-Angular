@@ -2,8 +2,8 @@
     <a class="navbar-brand" routerLink="/rentals">BookFast <img src="favicon.ico"></a>
 
     <form class="form-inline">
-        <input #citySearch class="form-control mr-sm-2 first-search" type="search" placeholder="Search" aria-label="Search">
-        <button (click)="search(citySearch.value)" class="btn btn-outline-success my-2 my-sm-0 btn-first-search" type="button">Search</button>
+        <input #citySearch type="text" (keyup.enter)="search(citySearch.value)" class="form-control mr-sm-2 first-search" placeholder="Search" aria-label="Search"/>
+        <button (click)="search(citySearch.value)" class="btn btn-outline-success my-2 my-sm-0 btn-first-search" type="submit">Search</button>
     </form>
 
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
