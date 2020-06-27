@@ -18,6 +18,7 @@
               <p class="card-text booking-days"> {{booking.startAt | formatDate}} - {{booking.endAt | formatDate}} | {{booking.days}} days</p> <!-- booking startAt - endAt | days -->
               <p class="card-text booking-price"><span>Price: </span> <span class="booking-price-value">{{booking.totalPrice}} $</span></p> <!-- booking price -->
               <a *ngIf="booking.rental" class="btn btn-bwm" routerLink="/rentals/{{booking.rental._id}}">Go to Rental</a> <!-- link to rental detail -->
+              <a *ngIf="booking.rental" class="btn btn-slip" (click)="generatePdf(booking)">Booking Slip</a>
             </div>
             <div class="card-footer text-muted">
               Created {{booking.createdAt | formatDate}} <!-- booking createdAt -->

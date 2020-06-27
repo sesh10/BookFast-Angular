@@ -1,4 +1,4 @@
 module.exports = {
-    DB_URI: "",
-    SECRET: 'kgbgacyffjcanwxg125738'
+    DB_URI: process.env.DB_URI,
+    SECRET: process.env.SECRET
 }

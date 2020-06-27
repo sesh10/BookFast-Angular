@@ -42,6 +42,7 @@
     "ng2-daterangepicker": "^3.0.1",
     "ng6-toastr-notifications": "^1.0.4",
     "ngx-pipes": "^2.7.3",
+    "pdfmake": "^0.1.65",
     "rxjs": "~6.5.4",
     "rxjs-compat": "^6.5.5",
     "tslib": "^1.10.0",
